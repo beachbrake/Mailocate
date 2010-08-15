@@ -1,0 +1,97 @@
+<html> 
+<head>
+    <title>Search</title></head> 
+    
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body {
+          font-family:georgia, serif;
+    	  color:#381704;
+	      letter-spacing:0.1em;
+	      line-height:200%;
+	      padding-top:11px;
+        }
+        
+        #container { 
+
+        }
+        
+        #logoBox {
+            float: left;
+            margin: 10px;
+        }
+        
+        #searchBox {
+            float: left;
+            margin: 10px;
+        }
+        
+        hr {
+            margin: 10px;
+        }
+        
+        #results {
+            margin: 10px;
+            float: left;
+            border: 1px solid #ccc;
+            width: 48%;
+        }
+        
+        #frame {
+            margin: 10px;
+            border: 1px solid #ccc;
+            width: 48%;
+            float:right;
+        }
+        
+        #mail {
+            border: none;
+            width: 100%;
+            height: 600px;
+        }
+        
+        p {
+            margin: 3px;
+        }
+        
+        .body {
+            font-size: 12px;
+        }
+        
+        .author {
+            color: #000;
+            font-weight: bold;
+        }
+        
+    </style>
+
+<body> 
+    <div id="container">
+        <div id="header">
+            <div id="logoBox">
+                <h1>Mailocate</h1>
+            </div>
+            <div id="searchBox">
+               <form action="http://localhost/cgi-bin/mailocate/search.py"> 
+                    <input type="text" name="q" value="$search_string" /> 
+                    <input type="submit" value="Search" /> 
+               </form> 
+            </div>
+            <div style="clear:both"></div>
+        </div>
+        
+        <hr />
+        
+        <div id="results">
+            $results
+        </div>
+        <div id="frame">
+            <iframe id="mail" name="mail"></iframe>
+        </div>
+    </div>
+</body> 
+</html>
