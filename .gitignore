@@ -1,0 +1,8 @@
+cron
+mail
+scripts
+bin
+Mailman
+.bzr*
+*.systers
+templates
